@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dkynlqrtgoxx1"]
 
 [ext_resource type="Texture2D" uid="uid://pvjv7nhvvfjd" path="res://gabriela/Tiles.png" id="1_ps3ac"]
-[ext_resource type="PackedScene" uid="uid://bm7rvr75vyyot" path="res://gabriela/player.tscn" id="2_oibx1"]
+[ext_resource type="PackedScene" uid="uid://bm7rvr75vyyot" path="res://scenes/player/player.tscn" id="2_oibx1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4k428"]
 texture = ExtResource("1_ps3ac")
