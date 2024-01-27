@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddv5n52wl42p"]
+
+[sub_resource type="TileSet" id="TileSet_j4k5a"]
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_j4k5a")
+rendering_quadrant_size = 17
+format = 2
