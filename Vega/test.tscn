@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c3je0mqvykg41"]
+[gd_scene load_steps=14 format=3 uid="uid://dcvn7023vi5g5"]
 
 [ext_resource type="Script" path="res://Vega/test.gd" id="1_3b735"]
 [ext_resource type="Texture2D" uid="uid://pvjv7nhvvfjd" path="res://gabriela/Tiles.png" id="1_evbvo"]
