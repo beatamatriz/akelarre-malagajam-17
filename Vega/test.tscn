@@ -1466,7 +1466,7 @@ position = Vector2(-229, -129)
 [node name="Checkpoints" type="Node" parent="."]
 
 [node name="Dopamina" parent="." instance=ExtResource("7_ftobb")]
-position = Vector2(478, -44)
+position = Vector2(576, -55)
 
 [node name="Spike_floor" parent="." instance=ExtResource("10_aaayj")]
 position = Vector2(215, 89)
