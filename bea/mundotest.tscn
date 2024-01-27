@@ -1,13 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b6d8ioakx8vw5"]
+[gd_scene load_steps=7 format=3 uid="uid://b6d8ioakx8vw5"]
 
 [ext_resource type="PackedScene" uid="uid://bm7rvr75vyyot" path="res://scenes/player/player.tscn" id="1_6ev7s"]
 [ext_resource type="Texture2D" uid="uid://b8ijurjhykdxo" path="res://assets/tileset/tileset_brain.png" id="1_wo74k"]
 [ext_resource type="PackedScene" uid="uid://cp2nbqimbbeou" path="res://scenes/dopamina/dopamina.tscn" id="3_c811b"]
 [ext_resource type="PackedScene" uid="uid://so7gqiywddqw" path="res://scenes/checkpoint/checkpoint.tscn" id="4_c7m4v"]
-[ext_resource type="PackedScene" uid="uid://cso2hlrodr0kv" path="res://scenes/spikes/spike_celing.tscn" id="5_5plp2"]
-[ext_resource type="PackedScene" uid="uid://bo1wn5g7xpr2k" path="res://scenes/spikes/spike_left.tscn" id="6_7u5tt"]
-[ext_resource type="PackedScene" uid="uid://pn0wq4arwkvc" path="res://scenes/spikes/spike_floor.tscn" id="7_uudtd"]
-[ext_resource type="PackedScene" uid="uid://c4dmad5xft3ch" path="res://scenes/spikes/spike_right.tscn" id="8_pkfmw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_goyri"]
 texture = ExtResource("1_wo74k")
@@ -70,18 +66,3 @@ position = Vector2(1339, -214)
 
 [node name="checkpoint" parent="." instance=ExtResource("4_c7m4v")]
 position = Vector2(481, -52)
-
-[node name="Spike_celing" parent="." instance=ExtResource("5_5plp2")]
-position = Vector2(145, -228)
-
-[node name="Spike_left" parent="." instance=ExtResource("6_7u5tt")]
-position = Vector2(85, -80)
-
-[node name="Spike_floor" parent="." instance=ExtResource("7_uudtd")]
-position = Vector2(258, -165)
-
-[node name="Spike_floor2" parent="." instance=ExtResource("7_uudtd")]
-position = Vector2(271, -76)
-
-[node name="Spike_right" parent="." instance=ExtResource("8_pkfmw")]
-position = Vector2(-68, -87)

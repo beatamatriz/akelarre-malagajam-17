@@ -1,16 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://dcvn7023vi5g5"]
+[gd_scene load_steps=13 format=3 uid="uid://dcvn7023vi5g5"]
 
 [ext_resource type="Script" path="res://Vega/test.gd" id="1_3b735"]
 [ext_resource type="Texture2D" uid="uid://pvjv7nhvvfjd" path="res://gabriela/Tiles.png" id="1_evbvo"]
 [ext_resource type="PackedScene" uid="uid://bm7rvr75vyyot" path="res://scenes/player/player.tscn" id="2_pxtq7"]
 [ext_resource type="PackedScene" path="res://gabriela/moving_plataform.tscn" id="3_2a4wy"]
 [ext_resource type="PackedScene" path="res://gabriela/one_way_plataform.tscn" id="4_h1tpi"]
-[ext_resource type="PackedScene" uid="uid://so7gqiywddqw" path="res://scenes/checkpoint/checkpoint.tscn" id="6_12stu"]
 [ext_resource type="PackedScene" uid="uid://cp2nbqimbbeou" path="res://scenes/dopamina/dopamina.tscn" id="7_ftobb"]
-[ext_resource type="PackedScene" uid="uid://c4dmad5xft3ch" path="res://scenes/spikes/spike_right.tscn" id="8_hcxvm"]
-[ext_resource type="PackedScene" uid="uid://cso2hlrodr0kv" path="res://scenes/spikes/spike_celing.tscn" id="9_c6gyd"]
+[ext_resource type="PackedScene" uid="uid://bo1wn5g7xpr2k" path="res://scenes/spikes/spike_left.tscn" id="8_yc0tw"]
+[ext_resource type="PackedScene" uid="uid://cso2hlrodr0kv" path="res://scenes/spikes/spike_celing.tscn" id="9_tijxc"]
 [ext_resource type="PackedScene" uid="uid://pn0wq4arwkvc" path="res://scenes/spikes/spike_floor.tscn" id="10_aaayj"]
-[ext_resource type="PackedScene" uid="uid://bo1wn5g7xpr2k" path="res://scenes/spikes/spike_left.tscn" id="11_ofiwa"]
+[ext_resource type="PackedScene" uid="uid://c4dmad5xft3ch" path="res://scenes/spikes/spike_right.tscn" id="10_ypqet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4k428"]
 texture = ExtResource("1_evbvo")
@@ -1442,13 +1441,13 @@ layer_0/tile_data = PackedInt32Array(524286, 0, 0, 589822, 0, 1, 655358, 0, 2, 5
 layer_1/tile_data = PackedInt32Array()
 
 [node name="Player" parent="." instance=ExtResource("2_pxtq7")]
-position = Vector2(46, 99)
+position = Vector2(15, -59)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(46, 99)
+position = Vector2(15, -59)
 process_callback = 0
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
@@ -1462,28 +1461,21 @@ position = Vector2(-219, 139)
 scale = Vector2(0.996233, 1)
 
 [node name="StartingSpawn" type="Marker2D" parent="."]
-position = Vector2(-12, 72)
+position = Vector2(-229, -129)
 
 [node name="Checkpoints" type="Node" parent="."]
 
-[node name="checkpoint" parent="Checkpoints" instance=ExtResource("6_12stu")]
-position = Vector2(-287, 94)
-collision_layer = 1
-
-[node name="checkpoint2" parent="Checkpoints" instance=ExtResource("6_12stu")]
-position = Vector2(147, 118)
-
 [node name="Dopamina" parent="." instance=ExtResource("7_ftobb")]
-position = Vector2(244, 110)
-
-[node name="Spike_right" parent="." instance=ExtResource("8_hcxvm")]
-position = Vector2(-67, 29)
-
-[node name="Spike_celing" parent="." instance=ExtResource("9_c6gyd")]
-position = Vector2(-136, 25)
+position = Vector2(478, -44)
 
 [node name="Spike_floor" parent="." instance=ExtResource("10_aaayj")]
-position = Vector2(-61, 175)
+position = Vector2(215, 89)
 
-[node name="Spike_left" parent="." instance=ExtResource("11_ofiwa")]
-position = Vector2(-190, 55)
+[node name="Spike_left" parent="." instance=ExtResource("8_yc0tw")]
+position = Vector2(-372, 86)
+
+[node name="Spike_celing" parent="." instance=ExtResource("9_tijxc")]
+position = Vector2(15, -286)
+
+[node name="Spike_right" parent="." instance=ExtResource("10_ypqet")]
+position = Vector2(-162, 16)

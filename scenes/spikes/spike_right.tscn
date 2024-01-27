@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4dmad5xft3ch"]
+[gd_scene load_steps=7 format=3 uid="uid://c4dmad5xft3ch"]
 
 [ext_resource type="Script" path="res://scenes/spikes/spike_scripts.gd" id="1_mdpg6"]
 [ext_resource type="Texture2D" uid="uid://d3a7ywkr5byd4" path="res://Vega/spikes.png" id="2_8wheh"]
+[ext_resource type="AudioStream" uid="uid://cv2yukhxykyag" path="res://assets/sounds/death_sounds/Muerte1.wav" id="3_iteef"]
+[ext_resource type="AudioStream" uid="uid://byh4v4axvr46p" path="res://assets/sounds/death_sounds/Muerte2.wav" id="4_uqmkf"]
+[ext_resource type="AudioStream" uid="uid://d3ai58nxb4yip" path="res://assets/sounds/death_sounds/Muerte3.wav" id="5_uasxc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c1na4"]
 size = Vector2(128, 164)
@@ -18,5 +21,14 @@ texture = ExtResource("2_8wheh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-13, -84)
 shape = SubResource("RectangleShape2D_c1na4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_iteef")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_uqmkf")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_uasxc")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
