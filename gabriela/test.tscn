@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkynlqrtgoxx1"]
+[gd_scene load_steps=7 format=3 uid="uid://dkynlqrtgoxx1"]
 
 [ext_resource type="Texture2D" uid="uid://pvjv7nhvvfjd" path="res://gabriela/Tiles.png" id="1_ps3ac"]
 [ext_resource type="PackedScene" uid="uid://bm7rvr75vyyot" path="res://scenes/player/player.tscn" id="2_oibx1"]
+[ext_resource type="PackedScene" uid="uid://dx8g6l47p2ras" path="res://gabriela/moving_plataform.tscn" id="3_brfmr"]
+[ext_resource type="PackedScene" uid="uid://bpd1j7jakr07j" path="res://gabriela/one_way_plataform.tscn" id="4_h5xwh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4k428"]
 texture = ExtResource("1_ps3ac")
@@ -1432,14 +1434,21 @@ layer_0/tile_data = PackedInt32Array(524286, 0, 0, 589822, 0, 1, 655358, 0, 2, 5
 layer_1/tile_data = PackedInt32Array()
 
 [node name="Player" parent="." instance=ExtResource("2_oibx1")]
-position = Vector2(101, 83)
+position = Vector2(46, 99)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(101, 83)
+position = Vector2(46, 99)
 process_callback = 0
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="MovingPlataform" parent="." instance=ExtResource("3_brfmr")]
+position = Vector2(365, 133)
+
+[node name="OneWayPlataform" parent="." instance=ExtResource("4_h5xwh")]
+position = Vector2(242, 82)
+scale = Vector2(0.996233, 1)

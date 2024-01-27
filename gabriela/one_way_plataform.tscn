@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpd1j7jakr07j"]
+
+[ext_resource type="Texture2D" uid="uid://dmryv2snj2c1" path="res://gabriela/campana-fondo-amarillo-en-redes-sociales.jpg" id="1_noa12"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4t6k"]
+size = Vector2(268, 7)
+
+[node name="OneWayPlataform" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.223333, 0.00583333)
+texture = ExtResource("1_noa12")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_f4t6k")
+one_way_collision = true

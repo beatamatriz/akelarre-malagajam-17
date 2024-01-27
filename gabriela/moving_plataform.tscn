@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://dx8g6l47p2ras"]
+
+[ext_resource type="Texture2D" uid="uid://chlxmx4s2r6v5" path="res://gabriela/light-pink-1024x533-1.webp" id="1_svt25"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iw6i8"]
+size = Vector2(84, 12)
+
+[sub_resource type="Animation" id="Animation_4qgqb"]
+resource_name = "move_loop"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.0001, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(120, 0), Vector2(120, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_s8oih"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b5ids"]
+_data = {
+"RESET": SubResource("Animation_s8oih"),
+"move_loop": SubResource("Animation_4qgqb")
+}
+
+[node name="MovingPlataform" type="Node2D"]
+
+[node name="Plataform" type="AnimatableBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Plataform"]
+scale = Vector2(0.0824219, 0.0212008)
+texture = ExtResource("1_svt25")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataform"]
+shape = SubResource("RectangleShape2D_iw6i8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Plataform"]
+libraries = {
+"": SubResource("AnimationLibrary_b5ids")
+}
+autoplay = "move_loop"
