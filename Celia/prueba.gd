@@ -9,9 +9,3 @@ func _ready():
 	else:
 		player.global_position = starting_spawn.global_position
 
-func _process(delta):
-	if player.position.y > 300:
-		if CheckpointsGlobal.spawn:
-			player.global_position = CheckpointsGlobal.spawn
-		else:
-			player.global_position = starting_spawn.global_position
