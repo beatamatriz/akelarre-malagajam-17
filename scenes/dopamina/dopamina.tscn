@@ -4,16 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://clo6f3leprrrc" path="res://icon.svg" id="2_hudik"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jsfns"]
+size = Vector2(35.6, 37.7333)
 
 [node name="Dopamina" type="Area2D"]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_ta6uw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.90735e-06, 7.15256e-07)
-scale = Vector2(0.15625, 0.15625)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_hudik")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.66667, -0.999997)
+scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_jsfns")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
