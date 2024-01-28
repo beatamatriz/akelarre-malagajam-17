@@ -1,19 +1,78 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6junhhkx1aio"]
+[gd_scene load_steps=10 format=3 uid="uid://cso2hlrodr0kv"]
 
-[ext_resource type="Texture2D" uid="uid://cvjn84r8ef32j" path="res://bea/axon.png" id="1_df3id"]
+[ext_resource type="Script" path="res://scenes/axon/axon.gd" id="1_fmhc5"]
+[ext_resource type="Texture2D" uid="uid://b2c162iun67ac" path="res://assets/sprites/sprite_axon.png" id="2_syj07"]
+[ext_resource type="AudioStream" uid="uid://cv2yukhxykyag" path="res://assets/sounds/death_sounds/Muerte1.wav" id="3_efvsx"]
+[ext_resource type="AudioStream" uid="uid://byh4v4axvr46p" path="res://assets/sounds/death_sounds/Muerte2.wav" id="4_27bu7"]
+[ext_resource type="AudioStream" uid="uid://d3ai58nxb4yip" path="res://assets/sounds/death_sounds/Muerte3.wav" id="5_gi802"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_acxo0"]
-size = Vector2(249, 73)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1na4"]
+size = Vector2(144, 83)
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[sub_resource type="Animation" id="Animation_7lqai"]
+resource_name = "wiggle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_kbwu3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gf5o0"]
+_data = {
+"RESET": SubResource("Animation_kbwu3"),
+"wiggle": SubResource("Animation_7lqai")
+}
+
+[node name="Axon" type="Area2D"]
+script = ExtResource("1_fmhc5")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(6, -35.5)
+scale = Vector2(0.286271, 0.269231)
+texture = ExtResource("2_syj07")
+hframes = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4.76837e-07)
-scale = Vector2(0.867475, 1.10984)
-shape = SubResource("RectangleShape2D_acxo0")
+position = Vector2(-1, 1)
+scale = Vector2(2.44296, 2.75129)
+shape = SubResource("RectangleShape2D_c1na4")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1, -4.76837e-07)
-rotation = -0.23911
-scale = Vector2(0.242039, 0.206227)
-texture = ExtResource("1_df3id")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_efvsx")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_27bu7")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_gi802")
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gf5o0")
+}
+autoplay = "wiggle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

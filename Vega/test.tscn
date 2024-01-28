@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" path="res://gabriela/moving_plataform.tscn" id="3_2a4wy"]
 [ext_resource type="PackedScene" path="res://gabriela/one_way_plataform.tscn" id="4_h1tpi"]
 [ext_resource type="PackedScene" uid="uid://cp2nbqimbbeou" path="res://scenes/dopamina/dopamina.tscn" id="7_ftobb"]
-[ext_resource type="PackedScene" uid="uid://bo1wn5g7xpr2k" path="res://scenes/spikes/spike_left.tscn" id="8_yc0tw"]
-[ext_resource type="PackedScene" uid="uid://cso2hlrodr0kv" path="res://scenes/spikes/spike_celing.tscn" id="9_tijxc"]
-[ext_resource type="PackedScene" uid="uid://pn0wq4arwkvc" path="res://scenes/spikes/spike_floor.tscn" id="10_aaayj"]
-[ext_resource type="PackedScene" uid="uid://c4dmad5xft3ch" path="res://scenes/spikes/spike_right.tscn" id="10_ypqet"]
+[ext_resource type="PackedScene" path="res://scenes/spikes/spike_left.tscn" id="8_yc0tw"]
+[ext_resource type="PackedScene" uid="uid://cso2hlrodr0kv" path="res://scenes/axon/axon.tscn" id="9_tijxc"]
+[ext_resource type="PackedScene" path="res://scenes/spikes/spike_floor.tscn" id="10_aaayj"]
+[ext_resource type="PackedScene" path="res://scenes/spikes/spike_right.tscn" id="10_ypqet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4k428"]
 texture = ExtResource("1_evbvo")

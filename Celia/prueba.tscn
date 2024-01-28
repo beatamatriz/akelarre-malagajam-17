@@ -1,11 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dslts18836e5y"]
+[gd_scene load_steps=7 format=3 uid="uid://dslts18836e5y"]
 
 [ext_resource type="Script" path="res://Celia/prueba.gd" id="1_wrl8k"]
 [ext_resource type="Texture2D" uid="uid://cgchbsee6edks" path="res://gabriela/Tiles - copia.png" id="1_x33ss"]
 [ext_resource type="PackedScene" uid="uid://b7fs34jfbjwjy" path="res://Celia/player-celia.tscn" id="2_albb3"]
-[ext_resource type="PackedScene" uid="uid://pn0wq4arwkvc" path="res://scenes/spikes/spike_floor.tscn" id="4_hwqwc"]
 [ext_resource type="PackedScene" uid="uid://cp2nbqimbbeou" path="res://scenes/dopamina/dopamina.tscn" id="4_ur7cu"]
-[ext_resource type="PackedScene" uid="uid://so7gqiywddqw" path="res://scenes/checkpoint/checkpoint.tscn" id="5_h37oc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_htg4f"]
 texture = ExtResource("1_x33ss")
@@ -132,14 +130,9 @@ zoom = Vector2(0.5, 0.5)
 position = Vector2(30, -985)
 
 [node name="Dopamina" parent="." instance=ExtResource("4_ur7cu")]
+visible = false
 position = Vector2(764, -1069)
 
 [node name="Node" type="Node" parent="."]
 
-[node name="checkpoint" parent="Node" instance=ExtResource("5_h37oc")]
-position = Vector2(319, -905)
-
 [node name="Node2" type="Node" parent="."]
-
-[node name="Spike_floor" parent="Node2" instance=ExtResource("4_hwqwc")]
-position = Vector2(207, -902)
