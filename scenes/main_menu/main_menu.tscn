@@ -15,23 +15,20 @@ script = ExtResource("1_s5d0y")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
-offset_right = 2680.0
-offset_bottom = 1756.0
+offset_right = 4387.0
+offset_bottom = 2895.0
 scale = Vector2(0.109634, 0.0929143)
 texture = ExtResource("2_xyb3a")
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 2
-offset_left = 27.0
-offset_top = 6.0
-offset_right = 2707.0
-offset_bottom = 1770.0
-scale = Vector2(0.0945419, 0.0965857)
-text = "hola"
-icon = ExtResource("1_v42ua")
-flat = true
-alignment = 0
-
 [node name="Marker2D" type="Marker2D" parent="."]
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 117.0
+offset_right = 851.0
+offset_bottom = 505.0
+scale = Vector2(0.170618, 0.156509)
+texture_normal = ExtResource("1_v42ua")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
