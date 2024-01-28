@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://so7gqiywddqw"]
+[gd_scene load_steps=9 format=3 uid="uid://so7gqiywddqw"]
 
 [ext_resource type="Script" path="res://scenes/checkpoint/checkpoint_script.gd" id="1_icmrs"]
-[ext_resource type="Texture2D" uid="uid://7yp1vc43wvig" path="res://Vega/flag_red_green.png" id="1_lergb"]
+[ext_resource type="Texture2D" uid="uid://braey8jp014e4" path="res://assets/sprites/sprite_checkpoint_static.png" id="2_85tkw"]
+[ext_resource type="Texture2D" uid="uid://culkp4j8xdvgb" path="res://assets/sprites/sprite_checkpoint.png" id="3_g25o5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1sud5"]
-size = Vector2(182, 303.5)
+size = Vector2(180, 198)
 
 [sub_resource type="Animation" id="Animation_txtu5"]
 length = 0.4
@@ -12,7 +13,7 @@ loop_mode = 1
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("SpriteActive:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -20,63 +21,83 @@ tracks/0/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3)
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteInactive:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
-[sub_resource type="Animation" id="Animation_i5f82"]
+[sub_resource type="Animation" id="Animation_du6x3"]
 resource_name = "active"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "bezier"
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("SpriteActive:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(4, -0.25, 0, 0.25, 0, 5, -0.25, 0, 0.25, 0, 6, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3)
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14]
 }
 
-[sub_resource type="Animation" id="Animation_p1qqj"]
+[sub_resource type="Animation" id="Animation_j7tco"]
 resource_name = "inactive"
 length = 0.4
 loop_mode = 1
-tracks/0/type = "bezier"
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("SpriteInactive:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3)
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ie3qf"]
 _data = {
 "RESET": SubResource("Animation_txtu5"),
-"active": SubResource("Animation_i5f82"),
-"inactive": SubResource("Animation_p1qqj")
+"active": SubResource("Animation_du6x3"),
+"inactive": SubResource("Animation_j7tco")
 }
 
 [node name="checkpoint" type="Area2D"]
 collision_layer = 0
 script = ExtResource("1_icmrs")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="SpriteInactive" type="Sprite2D" parent="."]
+position = Vector2(-13, -188)
+scale = Vector2(0.508796, 0.508796)
+texture = ExtResource("2_85tkw")
+hframes = 2
+
+[node name="SpriteActive" type="Sprite2D" parent="."]
 light_mask = 0
-position = Vector2(-3.8147e-06, -153.375)
-scale = Vector2(2.90323, 2.442)
-texture = ExtResource("1_lergb")
-hframes = 4
-vframes = 2
+position = Vector2(-10, -196)
+scale = Vector2(0.500092, 0.528789)
+texture = ExtResource("3_g25o5")
+hframes = 5
+vframes = 3
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -152.25)
+position = Vector2(0, -9)
 shape = SubResource("RectangleShape2D_1sud5")
+metadata/_edit_lock_ = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Animation" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ie3qf")
 }
