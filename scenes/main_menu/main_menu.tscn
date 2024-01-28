@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdh6ahqx12l2c"]
+
+[ext_resource type="Script" path="res://scenes/main_menu/main_menu_script.gd" id="1_s5d0y"]
+[ext_resource type="Texture2D" uid="uid://c2c1hej665s2u" path="res://assets/menu/play.png" id="1_v42ua"]
+[ext_resource type="Texture2D" uid="uid://bvwcih47pw6m6" path="res://assets/menu/background.png" id="2_xyb3a"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s5d0y")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 2680.0
+offset_bottom = 1756.0
+scale = Vector2(0.109634, 0.0929143)
+texture = ExtResource("2_xyb3a")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 27.0
+offset_top = 6.0
+offset_right = 2707.0
+offset_bottom = 1770.0
+scale = Vector2(0.0945419, 0.0965857)
+text = "hola"
+icon = ExtResource("1_v42ua")
+flat = true
+alignment = 0
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
