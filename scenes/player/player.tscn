@@ -114,7 +114,7 @@ shape = SubResource("CapsuleShape2D_3ijot")
 metadata/_edit_lock_ = true
 
 [node name="Camera" type="Camera2D" parent="."]
-zoom = Vector2(0.15, 0.15)
+zoom = Vector2(0.11, 0.11)
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 libraries = {

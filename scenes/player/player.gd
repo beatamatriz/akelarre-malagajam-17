@@ -4,9 +4,9 @@ extends CharacterBody2D
 #const jump_velocity : float = -666.0
 #const double_jump_velocity : float = -599.0
 
-@export var speed : float = 180.0
-@export var jump_velocity : float = -200.0
-@export var double_jump_velocity : float = -150.0
+@export var speed : float
+@export var jump_velocity : float
+@export var double_jump_velocity : float
 
 var can_double_jump : bool = false;
 var last_check_point
