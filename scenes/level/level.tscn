@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://tfwdung3d1rm"]
+[gd_scene load_steps=28 format=3 uid="uid://tfwdung3d1rm"]
 
 [ext_resource type="Script" path="res://scenes/level/level_script.gd" id="1_vbdjq"]
 [ext_resource type="Texture2D" uid="uid://b8ijurjhykdxo" path="res://assets/tileset/tileset_brain.png" id="2_28fxk"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cp2nbqimbbeou" path="res://scenes/dopamina/dopamina.tscn" id="6_c0o65"]
 [ext_resource type="PackedScene" uid="uid://so7gqiywddqw" path="res://scenes/checkpoint/checkpoint.tscn" id="7_r4xv3"]
 [ext_resource type="Script" path="res://scenes/level/CheckPointManager.gd" id="9_a8fkv"]
+[ext_resource type="PackedScene" uid="uid://cx87tj7vum526" path="res://scenes/buttom/buttom.tscn" id="11_sqpgv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ittmw"]
 texture = ExtResource("3_hdybv")
@@ -568,9 +569,55 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-327681, 0, 0, -393216, 0, 0, -393215, 0, 0, -393214, 0, 0, 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 262147, 0, 0, 196611, 0, 0, 131075, 0, 0, 65539, 0, 0, 3, 0, 0, -65533, 0, 0, -131069, 0, 0, -196605, 0, 0, -262141, 0, 0, -327677, 0, 0, -393213, 0, 0, -327682, 0, 0, -262146, 0, 0, -196610, 0, 0, -131074, 0, 0, -65538, 0, 0, -2, 0, 0, 65534, 0, 0, 131070, 0, 0, 196606, 0, 0, 262142, 0, 0, 327678, 0, 0, 393214, 0, 0, -262145, 0, 0, -196609, 0, 0, -131073, 0, 0, -65537, 0, 0, -1, 0, 0, 65535, 0, 0, 131071, 0, 0, 196607, 0, 0, 262143, 0, 0, 327679, 0, 0, -327680, 0, 0, -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, -327679, 0, 0, -262143, 0, 0, -196607, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, 65537, 0, 0, 131073, 0, 0, 196609, 0, 0, 262145, 0, 0, -327678, 0, 0, -262142, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 0, 0, 196610, 0, 0, 262146, 0, 0, -393218, 0, 0, -393217, 0, 0, -458752, 0, 0, -458751, 0, 0, -458750, 0, 0, -458749, 0, 0)
 metadata/_edit_lock_ = true
 
+[node name="buttom" parent="." instance=ExtResource("11_sqpgv")]
+position = Vector2(-1074, 10734)
+
+[node name="hidden_plataform" parent="." instance=ExtResource("5_w67u5")]
+visible = false
+position = Vector2(5408, -9002)
+
 [node name="CheckPointManager" type="Node2D" parent="."]
 position = Vector2(-498, -8017)
 script = ExtResource("9_a8fkv")
+
+[node name="checkpoint5" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+position = Vector2(-282, 18711)
+
+[node name="checkpoint6" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+position = Vector2(3874, 18251)
+
+[node name="checkpoint7" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+position = Vector2(1085, 15979)
+
+[node name="checkpoint8" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+position = Vector2(5032, 12765)
+
+[node name="checkpoint9" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+position = Vector2(1750, 12518)
+
+[node name="checkpoint10" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+position = Vector2(289, 9146)
+
+[node name="checkpoint11" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+position = Vector2(5169, 9152)
+
+[node name="checkpoint12" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+position = Vector2(4581, 7137)
+
+[node name="checkpoint13" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+position = Vector2(-18, 7132)
+
+[node name="checkpoint14" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+position = Vector2(1585, 5599)
+
+[node name="checkpoint15" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+position = Vector2(5184, 4095)
+
+[node name="checkpoint16" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+position = Vector2(1720, 2342)
+
+[node name="checkpoint17" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+position = Vector2(4309, -637)
 
 [node name="checkpoint" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
 position = Vector2(-364, 247)
@@ -947,7 +994,7 @@ jump_velocity = -1000.0
 double_jump_velocity = -950.0
 
 [node name="StartingSpawn" type="Marker2D" parent="."]
-position = Vector2(-975, -7859)
+position = Vector2(-930, -7967)
 
 [node name="MovingPlataforms" type="Node2D" parent="."]
 position = Vector2(4087, 7489)
