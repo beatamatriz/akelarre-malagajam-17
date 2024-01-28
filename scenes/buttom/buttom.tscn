@@ -5,13 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://baxwh7rj0248u" path="res://assets/sprites/Boton_2 (1).png" id="2_rq1u6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0mkws"]
-size = Vector2(10, 2)
+size = Vector2(1096, 268.75)
 
 [node name="buttom" type="Area2D"]
 scale = Vector2(0.5, 0.4)
 script = ExtResource("1_hmpqd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-14, -21.25)
 scale = Vector2(0.5, 0.4)
 shape = SubResource("RectangleShape2D_0mkws")
 
