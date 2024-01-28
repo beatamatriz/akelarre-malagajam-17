@@ -3,7 +3,7 @@ extends Area2D
 var rng = RandomNumberGenerator.new()
 var my_random_number = int(rng.randf_range(1, 4))
 	
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	if my_random_number == 1:
 		$AudioStreamPlayer.play()
 	elif my_random_number == 2:
