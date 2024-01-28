@@ -11,6 +11,6 @@ func _on_body_entered(body):
 			$AudioStreamPlayer2.play()
 		elif my_random_number == 3:
 			$AudioStreamPlayer3.play()
-		await get_tree().create_timer(0.25).timeout
+		body.die()
 		#get_tree().quit()
 

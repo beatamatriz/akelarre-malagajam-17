@@ -11,6 +11,7 @@ func _ready():
 func _on_body_entered(body):
 	if not active and body.name == "Player":
 		active = true
+		body.update_checkpoint()
 		CheckpointsGlobal.spawn = global_position
 		$SpriteInactive.set_visible(false)
 		$SpriteActive.set_visible(true)
