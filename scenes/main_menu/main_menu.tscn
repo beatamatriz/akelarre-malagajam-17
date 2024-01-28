@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_s5d0y")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="background" type="TextureRect" parent="."]
 layout_mode = 2
 offset_right = 4387.0
 offset_bottom = 2895.0
@@ -22,10 +22,10 @@ texture = ExtResource("2_xyb3a")
 
 [node name="play_buttom" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 195.0
-offset_top = 117.0
-offset_right = 851.0
-offset_bottom = 505.0
+offset_left = 189.0
+offset_top = 112.0
+offset_right = 845.0
+offset_bottom = 500.0
 scale = Vector2(0.170618, 0.156509)
 texture_normal = ExtResource("1_v42ua")
 
