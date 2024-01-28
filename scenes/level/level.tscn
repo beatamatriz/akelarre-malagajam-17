@@ -622,6 +622,8 @@ layer_0/tile_data = PackedInt32Array(-2293766, 131073, 2, -2293765, 196609, 2, -
 
 [node name="Player" parent="." instance=ExtResource("4_7aknk")]
 position = Vector2(3369, 7285)
+jump_velocity = -1000.0
+double_jump_velocity = -950.0
 
 [node name="MovingPlataforms" type="Node2D" parent="."]
 position = Vector2(4087, 7489)
