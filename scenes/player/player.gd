@@ -1,8 +1,12 @@
 extends CharacterBody2D
 
-const speed : float = 600.0
-const jump_velocity : float = -666.0
-const double_jump_velocity : float = -599.0
+#const speed : float = 600.0
+#const jump_velocity : float = -666.0
+#const double_jump_velocity : float = -599.0
+
+@export var speed : float = 180.0
+@export var jump_velocity : float = -200.0
+@export var double_jump_velocity : float = -150.0
 
 var can_double_jump : bool = false;
 var last_check_point
