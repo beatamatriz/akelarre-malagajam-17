@@ -20,9 +20,7 @@ offset_bottom = 2895.0
 scale = Vector2(0.109634, 0.0929143)
 texture = ExtResource("2_xyb3a")
 
-[node name="Marker2D" type="Marker2D" parent="."]
-
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="play_buttom" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 195.0
 offset_top = 117.0
@@ -31,4 +29,4 @@ offset_bottom = 505.0
 scale = Vector2(0.170618, 0.156509)
 texture_normal = ExtResource("1_v42ua")
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="play_buttom" to="." method="_on_texture_button_pressed"]
