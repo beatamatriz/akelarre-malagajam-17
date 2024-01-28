@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cx87tj7vum526"]
+[gd_scene load_steps=5 format=3 uid="uid://cx87tj7vum526"]
 
+[ext_resource type="Script" path="res://scenes/buttom/buttom_script.gd" id="1_hmpqd"]
 [ext_resource type="Texture2D" uid="uid://2quo1pa3pakg" path="res://assets/sprites/Boton_1.png" id="1_xyic4"]
 [ext_resource type="Texture2D" uid="uid://baxwh7rj0248u" path="res://assets/sprites/Boton_2 (1).png" id="2_rq1u6"]
 
@@ -8,6 +9,7 @@ size = Vector2(10, 2)
 
 [node name="buttom" type="Area2D"]
 scale = Vector2(0.5, 0.4)
+script = ExtResource("1_hmpqd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.5, 0.4)
@@ -22,3 +24,5 @@ texture = ExtResource("1_xyic4")
 visible = false
 scale = Vector2(0.5, 0.4)
 texture = ExtResource("2_rq1u6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

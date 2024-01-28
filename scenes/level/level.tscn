@@ -897,3 +897,6 @@ loop = false
 position = Vector2(-3835, -1386)
 curve = SubResource("Curve2D_uire0")
 loop = false
+
+[node name="test_moving" parent="." instance=ExtResource("5_w67u5")]
+position = Vector2(5068, -9289)
