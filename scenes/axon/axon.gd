@@ -11,4 +11,4 @@ func _on_body_entered(_body):
 	elif my_random_number == 3:
 		$AudioStreamPlayer3.play()
 	await get_tree().create_timer(0.25).timeout
-	get_tree().reload_cdurrent_scene()
+	get_tree().reload_current_scene()
