@@ -7,15 +7,18 @@
 size = Vector2(10, 2)
 
 [node name="buttom" type="Area2D"]
+scale = Vector2(0.5, 0.4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.4)
 shape = SubResource("RectangleShape2D_0mkws")
 
 [node name="inactive" type="Sprite2D" parent="."]
 position = Vector2(0, 1.19209e-07)
-scale = Vector2(0.01, 0.008)
+scale = Vector2(0.5, 0.4)
 texture = ExtResource("1_xyic4")
 
 [node name="active" type="Sprite2D" parent="."]
-scale = Vector2(0.0103704, 0.00833333)
+visible = false
+scale = Vector2(0.5, 0.4)
 texture = ExtResource("2_rq1u6")
