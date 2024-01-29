@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://tjll6g7igpnl"]
+
+[ext_resource type="AudioStream" uid="uid://byccaojdfd7yw" path="res://assets/sounds/bg_music/chem_laugh.mp3" id="1_g7enx"]
+
+[node name="bg_music" type="AudioStreamPlayer"]
+stream = ExtResource("1_g7enx")
+volume_db = 6.0
+autoplay = true

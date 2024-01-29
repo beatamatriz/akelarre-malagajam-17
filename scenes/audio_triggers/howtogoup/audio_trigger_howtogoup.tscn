@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuqcff6yjtl7o"]
+
+[ext_resource type="Script" path="res://scenes/audio_triggers/howtogoup/audio_trigger_howtogoup_script.gd" id="1_ruhrx"]
+[ext_resource type="Texture2D" uid="uid://baxwh7rj0248u" path="res://assets/sprites/Boton_2 (1).png" id="2_5gf5o"]
+[ext_resource type="AudioStream" uid="uid://dqo4mjw0q72yf" path="res://assets/sounds/cortisol_voices/Buscando el botón.wav" id="2_v3sgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yel7f"]
+size = Vector2(77, 657)
+
+[node name="Audio_trigger_howtogoup" type="Area2D"]
+script = ExtResource("1_ruhrx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.627451, 0, 0.258824, 1)
+self_modulate = Color(1, 0.831373, 0.8, 1)
+position = Vector2(16, 289.5)
+scale = Vector2(0.180741, 0.463889)
+texture = ExtResource("2_5gf5o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28.5, 318.5)
+shape = SubResource("RectangleShape2D_yel7f")
+
+[node name="find_the_butttom" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_v3sgy")
+volume_db = 24.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="find_the_butttom" to="." method="_on_find_the_butttom_finished"]

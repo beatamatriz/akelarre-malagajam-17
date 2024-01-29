@@ -9,6 +9,9 @@ func _ready():
 	else:
 		player.global_position = starting_spawn.global_position
 
+func _process(delta): 
+	if Input.is_action_just_pressed("esc"):
+		GlobalFunctions.resetgame()
 #func _process(delta):
 	#if player.position.y > 300:
 		#if CheckpointsGlobal.spawn:

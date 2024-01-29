@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0n73bx4be46f"]
+
+[ext_resource type="Texture2D" uid="uid://deqdvalffga3w" path="res://assets/menu/Ilustración_Final.png" id="1_h02pd"]
+[ext_resource type="Script" path="res://scenes/final_scene/final_scene_script.gd" id="1_smbnl"]
+[ext_resource type="AudioStream" uid="uid://lgoh17dow5ui" path="res://assets/sounds/cortisol_voices/Dialogo dopamina y cortisol.wav" id="2_e65oh"]
+
+[node name="final_scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_smbnl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.250529, 0.249997)
+texture = ExtResource("1_h02pd")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_e65oh")
+volume_db = 24.0
+autoplay = true

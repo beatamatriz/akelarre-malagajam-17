@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://lgoh17dow5ui"
+path="res://.godot/imported/Dialogo dopamina y cortisol.wav-e1a4af668bc77c126d3a50841bdd167b.sample"
+
+[deps]
+
+source_file="res://assets/sounds/cortisol_voices/Dialogo dopamina y cortisol.wav"
+dest_files=["res://.godot/imported/Dialogo dopamina y cortisol.wav-e1a4af668bc77c126d3a50841bdd167b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

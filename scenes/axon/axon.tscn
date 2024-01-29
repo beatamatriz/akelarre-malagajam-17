@@ -63,12 +63,15 @@ shape = SubResource("RectangleShape2D_c1na4")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_efvsx")
+volume_db = 24.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_27bu7")
+volume_db = 24.0
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_gi802")
+volume_db = 24.0
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 libraries = {

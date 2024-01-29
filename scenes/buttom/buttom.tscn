@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cx87tj7vum526"]
+[gd_scene load_steps=6 format=3 uid="uid://cx87tj7vum526"]
 
 [ext_resource type="Script" path="res://scenes/buttom/buttom_script.gd" id="1_hmpqd"]
 [ext_resource type="Texture2D" uid="uid://2quo1pa3pakg" path="res://assets/sprites/Boton_1.png" id="1_xyic4"]
 [ext_resource type="Texture2D" uid="uid://baxwh7rj0248u" path="res://assets/sprites/Boton_2 (1).png" id="2_rq1u6"]
+[ext_resource type="AudioStream" uid="uid://bn8fkp3dbvlnh" path="res://assets/sounds/cortisol_voices/Subida.wav" id="4_18bc2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0mkws"]
 size = Vector2(1096, 268.75)
@@ -25,5 +26,9 @@ texture = ExtResource("1_xyic4")
 visible = false
 scale = Vector2(0.5, 0.4)
 texture = ExtResource("2_rq1u6")
+
+[node name="Cortisol_subir" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_18bc2")
+volume_db = 24.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

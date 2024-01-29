@@ -13,20 +13,41 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_s5d0y")
 
-[node name="background" type="TextureRect" parent="."]
-layout_mode = 2
-offset_right = 4387.0
-offset_bottom = 2895.0
-scale = Vector2(0.109634, 0.0929143)
-texture = ExtResource("2_xyb3a")
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-741, -554)
+scale = Vector2(0.156889, 0.156889)
 
-[node name="play_buttom" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 189.0
-offset_top = 112.0
-offset_right = 845.0
-offset_bottom = 500.0
-scale = Vector2(0.170618, 0.156509)
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+offset_left = -1549.0
+offset_top = -1262.0
+offset_right = 1715.0
+offset_bottom = 1135.0
+color = Color(0, 0, 0, 1)
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Camera2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1293.91
+offset_top = -866.854
+offset_right = 1340.09
+offset_bottom = 889.146
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.987598, 0.987598)
+ratio = 0.001
+
+[node name="background" type="TextureRect" parent="Camera2D/AspectRatioContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("2_xyb3a")
+stretch_mode = 3
+
+[node name="play_buttom" type="TextureButton" parent="Camera2D/AspectRatioContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_normal = ExtResource("1_v42ua")
 
-[connection signal="pressed" from="play_buttom" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Camera2D/AspectRatioContainer/play_buttom" to="." method="_on_texture_button_pressed"]
