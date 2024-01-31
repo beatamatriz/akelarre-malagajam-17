@@ -55,18 +55,43 @@ func _physics_process(delta):
 
 	if velocity.x < 0:
 		$Sprite.set_flip_h(false)
+		$death_shake.set_flip_h(false)
+		$death_fall.set_flip_h(false)
+		$death_fall.position.x = -119
+		$death_fall.position.y = -5
 	elif velocity.x > 0:
 		$Sprite.set_flip_h(true)
+		$death_shake.set_flip_h(true)
+		$death_fall.set_flip_h(true)
+		$death_fall.position.x = 119
+		$death_fall.position.y = 5
 	move_and_slide()
 
 func update_checkpoint():
 	last_checkpoint = position
 
 func die():
+	#avoid audio and animation spam when draged by plataform over axones
+	$".".set_collision_layer_value(1,false)
 	dead = true
-	#$Animation.play("death")
 	velocity.x = 0
-	await get_tree().create_timer(2).timeout
+	#Hide sprite for the animations
+	$Sprite.set_visible(false)
+	#Play death_shake animation
+	$death_shake.set_visible(true)
+	$Animation.play("death_shake")
+	await get_tree().create_timer(1.5).timeout
+	$death_shake.set_visible(false)
+	
+	#Play death_fall animation
+	$death_fall.set_visible(true)
+	$Animation.play("death_fall")
+	await get_tree().create_timer(1.3).timeout
+	$death_fall.set_visible(false)
+	
+	$Sprite.set_visible(true)
 	position = last_checkpoint
 	dead = false
+	await get_tree().create_timer(1).timeout
+	$".".set_collision_layer_value(1,true)
 	pass

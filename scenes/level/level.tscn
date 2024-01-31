@@ -639,9 +639,10 @@ position = Vector2(5184, 4095)
 position = Vector2(1720, 2342)
 
 [node name="checkpoint17" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
-position = Vector2(4309, -637)
+position = Vector2(2202, -460)
 
 [node name="checkpoint" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
+visible = false
 position = Vector2(-364, 247)
 
 [node name="checkpoint2" parent="CheckPointManager" instance=ExtResource("7_r4xv3")]
@@ -1014,13 +1015,13 @@ position = Vector2(-1067, -9644)
 
 [node name="Player" parent="." instance=ExtResource("4_7aknk")]
 z_as_relative = false
-position = Vector2(-974, -7859)
+position = Vector2(-954, -7094)
 speed = 1200.0
 jump_velocity = -1000.0
 double_jump_velocity = -950.0
 
 [node name="StartingSpawn" type="Marker2D" parent="."]
-position = Vector2(-466, -9783)
+position = Vector2(-909, -7202)
 
 [node name="MovingPlataforms" type="Node2D" parent="."]
 position = Vector2(4087, 7489)
