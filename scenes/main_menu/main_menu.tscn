@@ -28,21 +28,20 @@ color = Color(0, 0, 0, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1293.91
-offset_top = -866.854
-offset_right = 1340.09
-offset_bottom = 889.146
+offset_left = -1255.67
+offset_top = -854.109
+offset_right = 1378.33
+offset_bottom = 901.891
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.987598, 0.987598)
+scale = Vector2(0.957329, 0.957329)
 ratio = 0.001
 
 [node name="background" type="TextureRect" parent="Camera2D/AspectRatioContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
 size_flags_vertical = 4
 texture = ExtResource("2_xyb3a")
-stretch_mode = 3
+stretch_mode = 4
 
 [node name="play_buttom" type="TextureButton" parent="Camera2D/AspectRatioContainer"]
 layout_mode = 2

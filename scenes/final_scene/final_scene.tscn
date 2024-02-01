@@ -15,9 +15,11 @@ script = ExtResource("1_smbnl")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
+offset_left = 1.52588e-05
+offset_top = -0.999996
 offset_right = 1920.0
-offset_bottom = 1080.0
-scale = Vector2(0.250529, 0.249997)
+offset_bottom = 1079.0
+scale = Vector2(0.242329, 0.241815)
 texture = ExtResource("1_h02pd")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
