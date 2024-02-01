@@ -19,7 +19,7 @@ offset_left = 1.52588e-05
 offset_top = -0.999996
 offset_right = 1920.0
 offset_bottom = 1079.0
-scale = Vector2(0.242329, 0.241815)
+scale = Vector2(0.207737, 0.207296)
 texture = ExtResource("1_h02pd")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

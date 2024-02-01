@@ -28,13 +28,13 @@ color = Color(0, 0, 0, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1255.67
-offset_top = -854.109
-offset_right = 1378.33
-offset_bottom = 901.891
+offset_left = -1089.94
+offset_top = -739.376
+offset_right = 1544.06
+offset_bottom = 1016.62
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.957329, 0.957329)
+scale = Vector2(0.826711, 0.826711)
 ratio = 0.001
 
 [node name="background" type="TextureRect" parent="Camera2D/AspectRatioContainer"]
